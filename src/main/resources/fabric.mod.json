@@ -6,7 +6,8 @@
   "name": "Chunk Mod",
   "description": "Allows the player to join the world during world generation.",
   "authors": [
-    "mario_51"
+    "mario_51",
+    "pixfumy"
   ],
   "contact": {
     "sources": "https://github.com/Mario0051/chunk-mod",
