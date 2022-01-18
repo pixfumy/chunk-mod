@@ -6,7 +6,8 @@
   "mixins": [
   ],
   "client": [
-    "MinecraftServerMixin"
+    "MinecraftServerMixin",
+    "ServerChunkManagerMixin"
   ],
   "injectors": {
     "defaultRequire": 0
