@@ -24,8 +24,8 @@ public abstract class ServerChunkManagerMixin {
 
     @Shadow public abstract int getLoadedChunkCount();
 
-    @Redirect(method = "tickChunks", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/GameRules;getBoolean(Lnet/minecraft/world/GameRules$RuleKey;)Z", ordinal = 0))
-    public boolean dontSpawnMobsIfSpawnChunksNotLoaded(GameRules instance, GameRules.RuleKey<GameRules.BooleanRule> rule) {
+    @Redirect(method = "tickChunks", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/GameRules;getBoolean(Lnet/minecraft/world/GameRules$Key;)Z", ordinal = 0))
+    public boolean dontSpawnMobsIfSpawnChunksNotLoaded(GameRules instance, GameRules.Key<GameRules.BooleanRule> rule) {
         if (this.world.getChunkManager().getTotalChunksLoadedCount() < Math.pow(this.world.getServer().getPlayerManager().getViewDistance(), 2)) {
             return false;
         } else {
